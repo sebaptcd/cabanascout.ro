@@ -7,7 +7,10 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.65}
+body{margin:0;font-family:var(--font);color:var(--ink);line-height:1.65;
+background-color:#f6f4ec;
+background-image:radial-gradient(900px 480px at 8% -4%,rgba(31,81,66,.07),transparent 60%),radial-gradient(800px 460px at 96% 6%,rgba(240,165,0,.06),transparent 60%),radial-gradient(700px 700px at 50% 110%,rgba(31,81,66,.05),transparent 60%);
+background-attachment:fixed}
 a{color:var(--moss)}
 img{max-width:100%;height:auto;display:block}
 .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
@@ -103,7 +106,7 @@ label{font-weight:700;font-size:.9rem}
 /* === v4: YouTube-inspired compact cards + readable type (overrides v3) === */
 :root{--yt-text:#0f0f0f;--yt-sub:#606060;--yt-chip:#f2f2f2;--yt-line:#e5e5e5}
 html{font-size:16px}
-body{font-family:"Roboto","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.6;color:var(--yt-text);background:#fff}
+body{font-family:"Roboto","Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.6;color:var(--yt-text)}
 .wrap{max-width:1200px}
 h1.title{font-size:1.9rem;line-height:1.25;font-weight:700;letter-spacing:-.2px}
 h2.title{font-size:1.45rem;line-height:1.3;font-weight:700}

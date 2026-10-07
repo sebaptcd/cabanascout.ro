@@ -10,7 +10,19 @@ document.addEventListener('DOMContentLoaded',()=>{
     const h=(a.getAttribute('href')||'').toLowerCase();
     if(h===path||(path===''&&h==='index.html')) a.classList.add('active');
   });
-  // timeline filter
+  // fan deck: vertical scroll spreads the horizontal hand 0..1
+  const fan=document.getElementById('fan');
+  if(fan){
+    const set=()=>{
+      const r=fan.getBoundingClientRect();
+      const total=r.height-window.innerHeight;
+      const p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;
+      fan.style.setProperty('--fan',p.toFixed(3));
+    };
+    let tick=false;
+    const onScroll=()=>{if(!tick){tick=true;requestAnimationFrame(()=>{set();tick=false;});}};
+    set(); window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll);
+  }
   const btns=document.querySelectorAll('[data-filter-year]');
   const items=document.querySelectorAll('[data-year]');
   if(btns.length&&items.length){

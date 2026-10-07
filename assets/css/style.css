@@ -100,27 +100,50 @@ label{font-weight:700;font-size:.9rem}
   .grid.cols-3,.grid.cols-2,.grid.cols-4{grid-template-columns:1fr}
   .stat-grid{grid-template-columns:1fr 1fr}
 }
-/* === Senior-friendly story mode (v2) === */
-html{font-size:19px}
-body{line-height:1.75}
-.wrap{max-width:860px}
-.header-inner{max-width:960px}
-.hero-inner{max-width:960px;grid-template-columns:1fr;gap:18px;padding:44px 20px 36px}
-.hero h1{font-size:clamp(2.1rem,5vw,3rem)}
+/* === Senior-friendly story mode (v3: balanced + spacious) === */
+html{font-size:18px}
+body{line-height:1.7}
+.wrap,.header-inner,.hero-inner,.footer-inner{max-width:1120px;margin-left:auto;margin-right:auto}
+.wrap{padding:0 24px}
+.header-inner{padding:14px 24px}
+.hero{border-radius:0 0 32px 32px}
+.hero-inner{grid-template-columns:1.05fr .95fr;gap:36px;padding:64px 24px 56px;align-items:center}
+.hero figure{margin:0}
+.hero figure img{border-radius:22px;box-shadow:0 20px 50px rgba(0,0,0,.35);aspect-ratio:4/3;object-fit:cover;width:100%}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.2rem)}
 .hero p.lead{font-size:1.15rem}
-nav.main a{font-size:1.02rem;padding:12px 14px}
-.btn{min-height:56px;font-size:1.08rem;padding:15px 24px;border-radius:16px}
-.step{background:#fff;border:2px solid var(--line);border-radius:20px;padding:26px;margin:18px 0;box-shadow:var(--shadow)}
-.step .num{display:inline-flex;width:44px;height:44px;border-radius:50%;background:var(--forest);color:#fff;font-weight:800;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:10px}
+nav.main a{font-size:1rem;padding:11px 14px}
+.btn{min-height:54px;font-size:1.05rem;padding:14px 24px;border-radius:16px}
+section.block{padding:56px 0}
+.prose{max-width:760px;margin-left:auto;margin-right:auto}
+.step{background:#fff;border:2px solid var(--line);border-radius:22px;padding:30px;margin:22px auto;box-shadow:var(--shadow);max-width:760px}
+.step .num{display:inline-flex;width:46px;height:46px;border-radius:50%;background:var(--forest);color:#fff;font-weight:800;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:10px}
 .step h2{margin:6px 0 8px;font-size:1.6rem}
-.step p{font-size:1.08rem;margin:8px 0}
-.story-nav{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+.step p{font-size:1.06rem;margin:8px 0}
+.step img.inline{border-radius:16px;margin:14px 0;width:100%;aspect-ratio:16/9;object-fit:cover;background:#dfe7df}
+.story-nav{display:flex;gap:12px;flex-wrap:wrap;margin:26px auto;max-width:760px}
 .story-nav .btn{flex:1;min-width:220px;justify-content:center;text-align:center}
 .breadcrumb{font-size:.95rem;color:var(--muted);margin:0 0 6px}
 .progress{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;display:inline-block;font-weight:700;color:var(--moss);margin-bottom:10px}
-.card{padding:24px;font-size:1.05rem}
-details summary{font-size:1.12rem;padding:6px 0}
+/* image cards */
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:24px 0}
+.feature{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.feature img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.feature .pad{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.feature h3{margin:0;font-size:1.25rem}
+.feature p{margin:0;color:var(--muted)}
+.feature .pad .btn{margin-top:12px;justify-content:center}
+.band{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;margin:24px 0}
+.band img{border-radius:18px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.card{padding:24px;font-size:1.03rem}
+details summary{font-size:1.1rem;padding:6px 0}
 .post-card img{aspect-ratio:16/9}
-.article{font-size:1.12rem}
+.article{font-size:1.1rem;max-width:760px;margin:0 auto}
 .article p{margin:14px 0}
+.article img.hero-img{border-radius:18px;width:100%;aspect-ratio:16/9;object-fit:cover}
 .article blockquote{border-left:5px solid var(--amber);margin:18px 0;padding:10px 18px;background:#fff;border-radius:0 14px 14px 0;font-style:italic}
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:22px}
+  .feature-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .band{grid-template-columns:1fr}
+}

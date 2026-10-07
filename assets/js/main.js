@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'));
   const y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
   const path=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-  document.querySelectorAll('nav.menu a').forEach(a=>{
+  // articolele de blog tin selectata sectiunea Povești; CTA-ul Inscrie-te nu se selecteaza niciodata
+  const active=location.pathname.includes('/povesti/')?'jurnal.html':path;
+  document.querySelectorAll('nav.menu a:not(.cta)').forEach(a=>{
     const h=(a.getAttribute('href')||'').toLowerCase();
-    if(h===path||(path===''&&h==='index.html'))a.setAttribute('aria-current','page');
+    if(h===active||(active===''&&h==='index.html'))a.setAttribute('aria-current','page');
   });
   const fbtns=document.querySelectorAll('[data-f]');
   const items=document.querySelectorAll('[data-y]');

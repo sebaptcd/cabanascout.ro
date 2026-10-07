@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded',()=>{
   const b=document.querySelector('.burger'),n=document.querySelector('nav.menu');
   if(b&&n)b.addEventListener('click',()=>n.classList.toggle('open'));
   const y=document.getElementById('year');if(y)y.textContent=new Date().getFullYear();
-  const path=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  const norm=s=>String(s||'').toLowerCase().replace(/^\.\.\//,'').replace(/\.html?$/,'');
+  const seg=norm(location.pathname.split('/').pop());
   // articolele de blog tin selectata sectiunea Povești; CTA-ul Inscrie-te nu se selecteaza niciodata
-  const active=location.pathname.includes('/povesti/')?'jurnal.html':path;
+  const active=location.pathname.includes('/povesti/')?'jurnal':(seg||'index');
   document.querySelectorAll('nav.menu a:not(.cta)').forEach(a=>{
-    const h=(a.getAttribute('href')||'').toLowerCase();
-    if(h===active||(active===''&&h==='index.html'))a.setAttribute('aria-current','page');
+    if(norm(a.getAttribute('href'))===active)a.setAttribute('aria-current','page');
   });
   const fbtns=document.querySelectorAll('[data-f]');
   const items=document.querySelectorAll('[data-y]');

@@ -103,6 +103,9 @@ h2.stitle{font-size:clamp(1.5rem,2.8vw,2.2rem);margin:.3em 0 .4em}
 .band{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#eef3fb;border-radius:24px;padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;box-shadow:var(--shadow)}
 .band h2{color:#fff}
 .band p{color:#d6e2f5}
+.band .card{color:var(--ink)}
+.band .card p{color:#2c3654}
+.band .card h2,.band .card h3{color:var(--ink)}
 .steps{display:grid;gap:12px}
 .step{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-s);padding:16px 18px;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
 .step .n{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}

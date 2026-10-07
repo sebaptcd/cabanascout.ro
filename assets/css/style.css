@@ -155,3 +155,19 @@ nav.main a{border-radius:999px}
   .feature-grid,.yt-grid{grid-template-columns:1fr}
   .cta-row .btn,.story-nav .btn{width:100%}
 }
+/* === v5: homepage teasers only + glass === */
+.hero-compact .hero-inner{padding:36px 24px;gap:24px}
+.hero-compact figure{display:none}
+.teasers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+.glass{position:relative;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.65);border-radius:18px;padding:18px;box-shadow:0 8px 24px rgba(20,51,42,.10);overflow:hidden}
+.glass::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 35%);pointer-events:none}
+.hero .glass{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.hero .glass::after{background:linear-gradient(115deg,rgba(255,255,255,.35) 0%,rgba(255,255,255,0) 40%)}
+.teaser{display:flex;gap:14px;align-items:flex-start}
+.teaser .t-ico{flex:0 0 44px;width:44px;height:44px;border-radius:14px;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.teaser h3{margin:0;font-size:1rem;line-height:1.35}
+.teaser p{margin:4px 0 10px;font-size:.88rem}
+.teaser .btn{padding:8px 14px;min-height:36px;font-size:.85rem}
+.mini-row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.mini-row .glass{padding:12px 14px;font-size:.88rem}
+@media(max-width:900px){.teasers{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}

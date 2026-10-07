@@ -1,40 +1,37 @@
 <!doctype html><html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact — Cabana Scout</title><meta name="description" content="Contact Cabana Scout București: adresă, telefon, email, formular.">
-<link rel="icon" href="assets/img/logo.png"><link rel="stylesheet" href="assets/css/style.css"></head><body>
-<header class="site-header"><div class="header-inner">
-<a class="brand" href="index.html"><img src="assets/img/logo.png" alt="logo"><span><b>Cabana Scout</b><small>Cercetașii României • București</small></span></a>
+<title>Contact & Înscrieri — Cabana Scout</title><meta name="description" content="Înscrie-te la Cabana Scout București: adresă, telefon, email, formular.">
+<link rel="icon" href="assets/img/logo.svg"><link rel="stylesheet" href="assets/css/main.css"></head><body>
+<div class="topbar"><div class="wrap"><span>✉️ Răspundem și pe e-mail</span><span>cabana@scout.ro</span></div></div>
+<header class="site"><div class="navwrap">
+<a class="brand" href="index.html"><span class="brand-mark">⚜</span><span><b>Cabana Scout</b><small>Cercetașii României • București</small></span></a>
 <button class="burger">☰</button>
-<nav class="main"><a href="index.html">Acasă</a><a href="despre.html">Despre</a><a href="grupe.html">Grupe</a><a href="jurnal.html">Povești</a><a href="sustine.html">Ajută</a><a href="contact.html">Contact</a></nav>
+<nav class="menu"><a href="index.html">Acasă</a><a href="despre.html">Despre</a><a href="program.html">Program</a><a href="jurnal.html">Povești</a><a href="istoric.html">Istoric</a><a href="resurse.html">Resurse</a><a href="sustine.html">Susține</a><a href="contact.html" class="cta">Înscrie-te</a></nav>
 </div></header>
-<main class="wrap">
-<section class="block">
+<main class="wrap"><section class="pad">
+<p class="breadcrumb"><a href="index.html">Acasă</a> → Contact</p>
 <div class="kicker">Intră în Cabană</div>
-<h1 class="title">Contact</h1>
-<div class="two-col">
+<h1 class="stitle" style="font-size:clamp(1.9rem,3.6vw,2.7rem)">Hai la o sâmbătă de probă</h1>
+<div class="grid g2" style="margin-top:14px">
 <div class="card">
-<p><strong>Adresă corespondență:</strong> B-dul Regiei nr. 6B, Sector 6, București<br>
+<p><strong>Adresă:</strong> B-dul Regiei nr. 6B, Sector 6, București<br>
 <strong>Telefon:</strong> 0727.289.334<br>
-<strong>Cont:</strong> RO22BTRLRONCRT033228121C<br>
 <strong>Email:</strong> <a href="mailto:cabana@scout.ro">cabana@scout.ro</a><br>
 <strong>Facebook:</strong> <a href="https://www.facebook.com/cabanascout">facebook.com/cabanascout</a><br>
-<strong>Instagram:</strong> <a href="https://www.instagram.com/cabana_scout/">cabana_scout</a></p>
-<p class="muted">Înscrieri recomandate 1 sept – 1 dec. Pentru grupa 12 ani (ex. întrebare 2024): scrie-ne vârsta + grupa dorită (Temerari 10–14) și te chemăm la întâlnire.</p>
+<strong>Instagram:</strong> <a href="https://www.instagram.com/cabana_scout/">cabana_scout</a><br>
+<strong>Cont:</strong> RO22BTRLRONCRT033228121C</p>
+<p class="muted">Înscrieri recomandate 1 sept – 1 dec. Scrie-ne vârsta + grupa (ex. 12 ani → Temerari 10–14) și te chemăm la întâlnire.</p>
 </div>
 <div class="card">
-<form id="contact-form" name="contact" method="POST" data-netlify="true" netlify>
+<form name="contact" method="POST" data-netlify="true">
 <input type="hidden" name="form-name" value="contact">
-<div class="form-grid">
-<div><label for="nume">Nume</label><input id="nume" name="nume" required placeholder="Numele tău"></div>
-<div><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="tu@exemplu.ro"></div>
-<div><label for="subiect">Subiect</label><select id="subiect" name="subiect"><option>Înscriere copil/tânăr</option><option>Voluntariat / Lider</option><option>Școala Altfel / Team Building</option><option>Donații / Sponsorizări</option><option>Altceva</option></select></div>
-<div><label for="mesaj">Mesaj</label><textarea id="mesaj" name="mesaj" rows="5" required placeholder="Vârsta, grupa dorită, întrebarea ta…"></textarea></div>
+<div class="field"><label for="nume">Nume</label><input id="nume" name="nume" required placeholder="Numele tău"></div>
+<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="tu@exemplu.ro"></div>
+<div class="field"><label for="subiect">Subiect</label><select id="subiect" name="subiect"><option>Înscriere copil / tânăr</option><option>Voluntariat / Lider</option><option>Școala Altfel / Team building</option><option>Donații / Sponsorizări</option><option>Altceva</option></select></div>
+<div class="field"><label for="mesaj">Mesaj</label><textarea id="mesaj" name="mesaj" rows="5" required placeholder="Vârsta, grupa dorită, întrebarea ta…"></textarea></div>
 <button class="btn btn-dark" type="submit">Trimite →</button>
-<p id="form-ok" style="display:none;background:#e7efe8;padding:10px;border-radius:10px">Mulțumim! Te contactăm curând. (Netlify Forms preia mesajul la deploy.)</p>
-</div>
 </form>
 </div>
 </div>
-</section>
-</main>
-<footer class="site"><div class="footer-inner"><div><h4>Cabana Scout</h4><p>B-dul Regiei nr. 6B, Sector 6</p></div><div><h4>Social</h4><p><a href="https://www.facebook.com/cabanascout">Facebook</a> • <a href="https://www.instagram.com/cabana_scout/">Instagram</a></p></div><div><h4>Susține</h4><p>RO22BTRLRONCRT033228121C</p></div></div><div class="copy">© <span id="year"></span> Cabana Scout</div></footer>
+</section></main>
+<footer><div class="fgrid"><div><h4>⚜ Cabana Scout</h4><p>B-dul Regiei nr. 6B, Sector 6</p></div><div><h4>Social</h4><p><a href="https://www.facebook.com/cabanascout">Facebook</a> • <a href="https://www.instagram.com/cabana_scout/">Instagram</a></p></div><div><h4>Susține</h4><p>RO22BTRLRONCRT033228121C</p></div><div><h4>Explorează</h4><p><a href="jurnal.html">Povești</a></p></div></div><div class="copy">© <span id="year"></span> Cabana Scout</div></footer>
 <script src="assets/js/main.js"></script></body></html>

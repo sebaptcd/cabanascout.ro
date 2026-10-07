@@ -163,6 +163,17 @@ th{background:#e3eefb;color:var(--navy)}
 .arch-list .d{margin-left:auto;white-space:nowrap;font-size:.8rem;color:var(--muted);font-weight:400}
 h3.yr{margin:26px 0 4px;font-size:1.15rem;color:var(--navy)}
 
+/* comentarii articole */
+#comentarii{max-width:740px;margin:0 auto}
+.comments{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--shadow-s)}
+.comments h3{margin:22px 0 4px;font-size:1.1rem}
+.clist{display:grid;gap:12px;margin:12px 0}
+.citem{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-s);padding:13px 16px}
+.citem header{margin-bottom:4px}
+.citem p{margin:.3em 0;white-space:pre-wrap;overflow-wrap:break-word}
+.cform .hp{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.cmsg{min-height:1.4em}
+
 /* footer */
 footer{background:#0e1a44;color:#d6e2f5;margin-top:50px}
 footer .brand-mark{width:40px;height:40px}

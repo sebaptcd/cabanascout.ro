@@ -2,6 +2,15 @@
   publish = "."
   command = ""
 
+[functions]
+  directory = "netlify/functions"
+
+# Functiile trebuie sa raspunda inaintea regulii catch-all 404
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/404.html"

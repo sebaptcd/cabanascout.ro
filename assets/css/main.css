@@ -179,7 +179,14 @@ input,textarea,select{width:100%;padding:11px 13px;border-radius:11px;border:1px
   nav.menu{display:none;width:100%;flex-direction:column;align-items:stretch;padding:10px 0;flex-basis:100%}
   nav.menu.open{display:flex}
   nav.menu a{text-align:center}
-  .burger{display:block}
+  .burger{display:block;flex:0 0 auto;margin-left:0;padding:10px 14px}
+  /* brandul nu mai impinge burgerul: subtitlu ascuns, titlu cu elipsa */
+  .brand{flex:1 1 auto;min-width:0;gap:10px}
+  .brand>span:last-child{flex:1 1 auto;min-width:0}
+  .brand b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand small{display:none}
+  img.brand-mark{width:42px;height:42px;flex-basis:42px}
+  nav.menu a{padding:12px 14px;min-height:44px}
   .g3,.g4,.g2{grid-template-columns:1fr}
   .gallery.g4s{grid-template-columns:repeat(2,1fr);gap:10px}
   .fgrid{grid-template-columns:1fr}
@@ -202,4 +209,9 @@ input,textarea,select{width:100%;padding:11px 13px;border-radius:11px;border:1px
   .arch-list a{flex-wrap:wrap;gap:2px 10px}
   .arch-list .d{margin-left:0}
   .topbar{font-size:.76rem}
+  /* cronologia mai aerisita pe ecrane inguste */
+  .timeline{margin-left:4px;padding-left:14px}
+  .t{padding:11px 13px}
+  /* siguranta anti-overflow pentru siruri lungi fara spatii */
+  .card p{overflow-wrap:break-word}
 }

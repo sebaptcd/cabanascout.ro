@@ -100,3 +100,27 @@ label{font-weight:700;font-size:.9rem}
   .grid.cols-3,.grid.cols-2,.grid.cols-4{grid-template-columns:1fr}
   .stat-grid{grid-template-columns:1fr 1fr}
 }
+/* === Senior-friendly story mode (v2) === */
+html{font-size:19px}
+body{line-height:1.75}
+.wrap{max-width:860px}
+.header-inner{max-width:960px}
+.hero-inner{max-width:960px;grid-template-columns:1fr;gap:18px;padding:44px 20px 36px}
+.hero h1{font-size:clamp(2.1rem,5vw,3rem)}
+.hero p.lead{font-size:1.15rem}
+nav.main a{font-size:1.02rem;padding:12px 14px}
+.btn{min-height:56px;font-size:1.08rem;padding:15px 24px;border-radius:16px}
+.step{background:#fff;border:2px solid var(--line);border-radius:20px;padding:26px;margin:18px 0;box-shadow:var(--shadow)}
+.step .num{display:inline-flex;width:44px;height:44px;border-radius:50%;background:var(--forest);color:#fff;font-weight:800;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:10px}
+.step h2{margin:6px 0 8px;font-size:1.6rem}
+.step p{font-size:1.08rem;margin:8px 0}
+.story-nav{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}
+.story-nav .btn{flex:1;min-width:220px;justify-content:center;text-align:center}
+.breadcrumb{font-size:.95rem;color:var(--muted);margin:0 0 6px}
+.progress{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;display:inline-block;font-weight:700;color:var(--moss);margin-bottom:10px}
+.card{padding:24px;font-size:1.05rem}
+details summary{font-size:1.12rem;padding:6px 0}
+.post-card img{aspect-ratio:16/9}
+.article{font-size:1.12rem}
+.article p{margin:14px 0}
+.article blockquote{border-left:5px solid var(--amber);margin:18px 0;padding:10px 18px;background:#fff;border-radius:0 14px 14px 0;font-style:italic}

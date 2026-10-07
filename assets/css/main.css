@@ -37,8 +37,8 @@ nav.menu{margin-left:auto;display:flex;gap:4px;align-items:center;flex-wrap:wrap
 nav.menu a{text-decoration:none;color:var(--ink);font-weight:600;font-size:.93rem;padding:9px 14px;border-radius:999px}
 nav.menu a:hover{background:#e4ebf7}
 nav.menu a[aria-current="page"]{background:var(--navy);color:#fff}
-nav.menu a.cta{background:var(--navy);color:#fff}
-nav.menu a.cta:hover{background:var(--navy-2)}
+nav.menu a.cta{background:rgba(22,38,92,.09);color:var(--navy)}
+nav.menu a.cta:hover{background:rgba(22,38,92,.16)}
 .burger{display:none;margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 12px;font-size:1.15rem;cursor:pointer;color:var(--navy)}
 
 /* hero */

@@ -23,10 +23,11 @@ p{margin:.7em 0}
 
 /* header */
 .topbar{background:var(--navy);color:#eef3fb;font-size:.83rem}
-.topbar .wrap{display:flex;gap:14px;justify-content:space-between;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+.topbar .wrap{display:flex;gap:4px 14px;justify-content:space-between;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+.topbar .wrap span{overflow-wrap:anywhere;min-width:0}
 .topbar a{color:var(--sun-2);text-decoration:none}
 header.site{position:sticky;top:0;z-index:50;background:rgba(250,247,239,.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.navwrap{max-width:var(--max);margin:0 auto;padding:10px 22px;display:flex;align-items:center;gap:14px}
+.navwrap{max-width:var(--max);margin:0 auto;padding:10px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink)}
 img.brand-mark{width:48px;height:48px;border-radius:50%;flex:0 0 48px;object-fit:cover;background:#fff;border:2px solid var(--navy);box-shadow:var(--shadow-s)}
 .brand b{display:block;font-size:1.02rem;line-height:1.1;color:var(--navy)}
@@ -116,12 +117,14 @@ h2.stitle{font-size:clamp(1.5rem,2.8vw,2.2rem);margin:.3em 0 .4em}
 .prose p,.prose li{color:var(--ink)}
 .story .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .prose img{border-radius:14px}
-.prose .hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;margin:8px 0;box-shadow:var(--shadow-s)}
+.prose .hero-img{width:100%;height:auto;max-height:480px;object-fit:cover;border-radius:16px;margin:8px 0;box-shadow:var(--shadow-s)}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
 .gallery img{border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%;height:100%}
+.gallery.g4s{grid-template-columns:repeat(4,1fr)}
+.gallery.g4s img{aspect-ratio:1/1}
 .covers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
 .covers img{border-radius:12px;width:100%;box-shadow:var(--shadow-s)}
-img.card-img{border-radius:12px;margin-bottom:12px;width:100%;aspect-ratio:16/10;object-fit:cover}
+img.card-img{border-radius:12px;margin-bottom:12px;width:100%;height:auto;max-height:380px;object-fit:cover}
 .hero-card .ph-photo{padding:0;min-height:0;background:none}
 .hero-card .ph-photo::before{display:none}
 .hero-card .ph-photo img{border-radius:16px;width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
@@ -135,7 +138,8 @@ details summary{cursor:pointer;font-weight:750;color:var(--navy)}
 table{width:100%;border-collapse:collapse;font-size:.92rem;background:var(--paper);color:var(--ink)}
 th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
 th{background:#e3eefb;color:var(--navy)}
-.twrap{overflow:auto;border:1px solid var(--line);border-radius:var(--r-s)}
+.twrap{overflow:auto;border:1px solid var(--line);border-radius:var(--r-s);-webkit-overflow-scrolling:touch}
+.twrap table{min-width:460px}
 
 /* timeline */
 .timeline{border-left:3px solid var(--brand);margin:20px 0 0 8px;padding-left:20px;display:grid;gap:12px}
@@ -172,11 +176,30 @@ input,textarea,select{width:100%;padding:11px 13px;border-radius:11px;border:1px
   .fgrid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
-  nav.menu{display:none;width:100%;flex-direction:column;align-items:stretch;padding:10px 0}
+  nav.menu{display:none;width:100%;flex-direction:column;align-items:stretch;padding:10px 0;flex-basis:100%}
   nav.menu.open{display:flex}
   nav.menu a{text-align:center}
   .burger{display:block}
   .g3,.g4,.g2{grid-template-columns:1fr}
+  .gallery.g4s{grid-template-columns:repeat(2,1fr);gap:10px}
   .fgrid{grid-template-columns:1fr}
-  section.pad{padding:40px 0}
+  section.pad{padding:36px 0}
+  /* hero adaptat: mai compact, titlu mai mic, butoane pe toata latimea */
+  .hero-inner{padding:38px 22px 46px;gap:24px}
+  .hero h1{font-size:1.85rem}
+  .hero p.lead{font-size:1rem}
+  .btnrow .btn{flex:1 1 100%}
+  .stats{gap:8px}
+  .stat{flex:1 1 100px;min-width:0;padding:8px 12px}
+  .hero-card .ph-photo img{aspect-ratio:4/3}
+  /* banda CTA mai aerisita */
+  .band{padding:24px 20px;gap:18px}
+  .card{padding:18px}
+  /* copertele newsletterelor raman miniaturi, nu bannere uriase */
+  .gallery,.covers{grid-template-columns:1fr}
+  .covers{grid-template-columns:repeat(3,1fr);gap:8px}
+  /* listele de arhiva: data trece pe rand propriu */
+  .arch-list a{flex-wrap:wrap;gap:2px 10px}
+  .arch-list .d{margin-left:0}
+  .topbar{font-size:.76rem}
 }
